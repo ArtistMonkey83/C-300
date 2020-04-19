@@ -1,0 +1,75 @@
+Type Casting in program 3.9
+
+static_cast<data-type>(variableName)
+
+Used to cast a variable as another data type, like ASCII and Unicode numbers for symbols for example.
+
+Type coercion
+double var = 39.890;
+int newVal;
+newVal = var; // job is left to the compiler
+newVal = static_cast<int>(var); // telling the complier to do conversion
+
+int to double will take up 8 bytes of memory if this example switched data types of the variables!
+
+C-Style cast:
+cout<< ch << " is " << (int)ch;
+
+C++ prestandard
+cout << ch << " is " << (int)ch;
+
+
+
+
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+  double dVal = 34.234;
+  int newVal = 0;
+  char ch = 'L';
+
+  newVal = dVal; //typer coercion
+
+  cout <<" newVal: " << newVal << endl;
+  newVal = static_cast<int> (dVal);
+   cout << "newVal:" << newVal << endl;
+   cout << "casted to double: " << static_cast<double>(newVal) << endl;
+
+   newVal = newVal + 1.5;
+
+   cout <<" newVal + 1.5"<< newVal << endl;
+   cout << "char: " << ch << endl;
+    cout<< " char casted to int: "<< static_cast<int> (ch) << endl;
+    cout << " C type casting: " << (int) ch << endl;
+    cout << "Pre-standard C++ casting: "<< int(ch) << endl;
+}
+
+
+
+
+
+
+cin ignores whitespaces
+getline( cin, variable) captures whitespaces and newline characters, requires
+cin.get() captures [ENTER]
+cin.ignore(6,'\n') this will ignore 6 characters or a \n whichever happens first.
+
+
+#include<iomanip> allows you to use the << fixed << and showpoint options.
+
+fixed allows you to show a number with out the scientific notation. you dont need to use showpoint when you use fixed! if you are using double varible data-types you can use setprecision(number place to round to) and when fixed is added to round behind decimal
+
+showpoint allows you to display scientific notation
+setprecision(number of places after decimal) allows you to set a precise point after the decimal
+
+setw(int data type) sets a width of a particular length for the VERY NEXT VALUE! you have to place for every variable and if the value exceeds the int passed it will NOT ALTER YOUR VALUE! it will just look unjustified
+
+#include<ctime> allows you to use the computers time for functions like srand() for the seed of the function rand() #include<cstdlib> for rand and srand
+
+
+seed = time(0);
+
+srand(seed)
