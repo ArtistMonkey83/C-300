@@ -1,0 +1,27 @@
+
+Programming Project on Chapter 12
+
+Advanced File Operations
+
+1.
+
+Inventory Program: inventory.cpp – 20 pts
+
+
+
+Write a program that uses a structure to store the following inventory data in a file:
+
+Item Description
+Product ID
+Quantity on Hand
+Wholesale Cost
+Retail Cost
+The program should have a menu that allows the user to perform the following tasks:
+
+Add new records to the file
+Search and display a record in the file (search should be based on product ID)
+Change a record in the file (you can change any member except the product ID)
+Quit program
+The program should continue as long as the user doesn’t choose to quit.
+
+Input Validation: The menu choices should be only 1 – 4.  The program should not accept quantities, or wholesale or retail costs, less than 0.0.
